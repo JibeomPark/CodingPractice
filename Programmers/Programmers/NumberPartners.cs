@@ -35,7 +35,7 @@ public class Solution
                 leng = lengY;
 
             for (int i = 0; i < leng; i++)
-                builder.Append(curser); // answer = string.Join(answer, curser.ToString());  // answer += curser;
+                builder.Append(curser);
 
             currentNumber--;
             if (currentNumber < 0)
@@ -49,5 +49,7 @@ public class Solution
             return "0";
 
         return builder.ToString();
+
+        
     }
 }
