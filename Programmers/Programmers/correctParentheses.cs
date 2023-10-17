@@ -5,27 +5,26 @@
         public bool solution(string s)
         {
             bool answer = true;
-            int a = 0;
-            int b = 0;
+            int cnt = 0;
+            
             char leftPar = char.Parse("(");
             char rightPar = char.Parse(")");
 
             foreach (char word in s)
             {
-                
                 if (word.CompareTo(leftPar) == 0)
-                    a++;
+                    cnt++;
                 else if (word.CompareTo(rightPar) == 0)
-                    b++;
+                    cnt++;
 
-                if (a - b < 0)
+                if (cnt < 0)
                 {
                     return false;
                 }
             }
 
 
-            return a == b;
+            return cnt == 0;
         }
     }
 }
