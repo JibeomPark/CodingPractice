@@ -3,14 +3,6 @@ using System.Text;
 
 public class NumberPartners
 {
-    public static void Main(string[] args)
-    {
-        Solution m1 = new Solution();
-        Console.WriteLine(m1.solution("5525", "1255"));
-    }
-}
-public class Solution
-{
     public string solution(string X, string Y)
     {
         string answer = "";
