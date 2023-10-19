@@ -5,8 +5,9 @@ namespace Programmers
     {
         public static void Main(string[] args)
         {
-            correctParentheses m1 = new correctParentheses();
-            Console.WriteLine(m1.solution(")()("));
+            var m1 = new SelfPlay();
+            int[] a = new int[] { 2, 3,4,5,6,7,8,9,1 };
+            Console.WriteLine(m1.solution(a));
         }
     }
 }
