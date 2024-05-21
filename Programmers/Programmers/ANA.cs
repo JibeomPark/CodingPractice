@@ -7,20 +7,25 @@
             var info = Console.ReadLine().Split();
             var size = int.Parse(info[0]);
             var start = int.Parse(info[1]);
+            var path = MakePath(size);
 
-            var input = new int[size, size];
+            Console.WriteLine(GetShortestDistance(ref path, start));
+        }
 
-            for(int i = 0; i < size; i++)
+        private static int[,] MakePath(int size)
+        {
+            var path = new int[size, size];
+
+            for (int i = 0; i < size; i++)
             {
                 var line = Console.ReadLine().Split();
-                for(int j = 0; j < size; j++)
+                for (int j = 0; j < size; j++)
                 {
-                    input[i, j] = int.Parse(line[j]);
+                    path[i, j] = int.Parse(line[j]);
                 }
             }
 
-            Console.WriteLine(GetShortestDistance(ref input, start));
-
+            return path;
         }
 
         private static int GetShortestDistance(ref int[,] path, int s)
